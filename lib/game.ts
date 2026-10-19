@@ -56,9 +56,9 @@ export function getDayNumber(date: Date = new Date()): number {
 
 // Everyone gets the same word on the same day, with no server needed,
 // because the word is picked purely from the date.
-// Why "* 7919": the answer list is alphabetical, so day N -> word N would be
-// predictable (about, above, abuse...). Multiplying by a large prime jumps
-// around the list instead, and still visits every word before repeating.
+// Day 0 -> word 0, day 1 -> word 1, and so on. The answer list is stored in
+// shuffled order (see words.ts), so going through it in order still feels random.
+// The % wraps back to the start of the list once every word has been used.
 export function getDailyWord(date: Date = new Date()): string {
   return ANSWERS[getDayNumber(date) % ANSWERS.length];
 }
