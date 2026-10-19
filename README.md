@@ -5,21 +5,6 @@ A Wordle clone built with Next.js, TypeScript, and Tailwind CSS. It runs on its 
 - **Daily mode**: everyone gets the same word each day. Progress and stats (win %, streaks, guess distribution) are saved in your browser.
 - **Unlimited mode**: a new random word every game, just for practice. It doesn't count toward stats.
 
-## Running locally
-
-```bash
-npm install
-npm run dev -- -p 3001
-```
-
-Open [http://localhost:3001/wordle](http://localhost:3001/wordle). Port 3001 is used so the portfolio can run on 3000 at the same time.
-
-```bash
-npm test       # unit tests for the game logic (Vitest)
-npm run lint
-npm run build
-```
-
 ## How it's put together
 
 | File | What it does |
